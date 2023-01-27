@@ -1,11 +1,8 @@
 # for macs
 .DS_Store  
 
-# no/ because of workflow audit
-node_modules
-
-# ignore the compiled code folder, since we generate it with command from source code
-dist/
-
 # Since we are compiling with parcel
 .parcel-cache/
+
+# OFC
+node_modules/
