@@ -1,18 +1,16 @@
 import ButtonComponent from "./components/ButtonComponent/ButtonComponent.js";
-import { PokemonCardComponent } from "./components/CardComponent/CardComponent.js";
 
 import Component from "./components/Component/Component.js";
 
-import { pokemons } from "./components/getThePokemon/index.js";
-
 import HeaderComponent from "./components/HeaderComponent/HeaderComponent.js";
+import { ListComponent } from "./components/ListComponent/ListComponent.js";
 
 const root = document.querySelector(".root");
 
 const pageComponent = new Component(root, "page-container", "div");
 pageComponent.render();
 
-const pageComponentElement = document.querySelector(".page-container");
+export const pageComponentElement = document.querySelector(".page-container");
 const headerComponent = new HeaderComponent(
   pageComponentElement,
   "header",
@@ -30,5 +28,5 @@ const listComponent = new Component(pageComponentElement, "list", "ul");
 listComponent.render();
 const listComponentElement = document.querySelector(".list");
 
-const pokeCard = new PokemonCardComponent(listComponentElement, pokemons[0]);
-pokeCard.render();
+const pokeList = new ListComponent();
+pokeList.render();

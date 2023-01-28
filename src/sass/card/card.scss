@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .card > li {
@@ -34,6 +34,14 @@
   letter-spacing: 2px;
   border-radius: 10px;
   box-shadow: 2px 2px 2px variables.$color-accent;
+}
+
+.card__name {
+  margin-right: 15px;
+}
+
+img {
+  filter: drop-shadow(7px 7px 7px variables.$color-accent);
 }
 
 .normal {
@@ -98,6 +106,14 @@
 
 .type-poison {
   background-color: variables.$color-poison-type;
+}
+
+.fairy {
+  background-color: variables.$color-fairy;
+}
+
+.type-fairy {
+  background-color: variables.$color-fairy-type;
 }
 
 .ground {
