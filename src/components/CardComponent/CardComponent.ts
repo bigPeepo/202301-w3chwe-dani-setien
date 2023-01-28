@@ -35,7 +35,7 @@ export class PokemonCardComponent extends Component {
     super.render();
 
     const {
-      name,
+      name: nameLowerCase,
       id,
       sprites: {
         other: {
@@ -44,6 +44,9 @@ export class PokemonCardComponent extends Component {
       },
     } = this.pokemon;
 
+    const name = `${nameLowerCase.charAt(0).toUpperCase()}${nameLowerCase.slice(
+      1
+    )}`;
     const type = this.pokemon.types[0].type.name;
 
     this.domElement.innerHTML = `
@@ -51,8 +54,8 @@ export class PokemonCardComponent extends Component {
       <li>
       <img src="${imgUrl}" height="200" width="200" />
       <div class="card__text">
-      <h2>${name}</h2>
-      <span>#${id}<span>
+      <h2 class="card__name">${name}</h2>
+      <span>#${id.toString().padStart(3, "0")}<span>
       </div>
       <span class="card__types type-${type}">${type.toUpperCase()}</span>
       </li>

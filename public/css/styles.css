@@ -89,7 +89,7 @@ html {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .card > li {
@@ -119,6 +119,14 @@ html {
   letter-spacing: 2px;
   border-radius: 10px;
   box-shadow: 2px 2px 2px rgba(41, 46, 60, 0.923);
+}
+
+.card__name {
+  margin-right: 15px;
+}
+
+img {
+  filter: drop-shadow(7px 7px 7px rgba(41, 46, 60, 0.923));
 }
 
 .normal {
@@ -183,6 +191,14 @@ html {
 
 .type-poison {
   background-color: #a744b0;
+}
+
+.fairy {
+  background-color: #f8afff;
+}
+
+.type-fairy {
+  background-color: #f584ff;
 }
 
 .ground {
