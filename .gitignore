@@ -1,8 +1,8 @@
 # for macs
 .DS_Store  
 
-# Since we are compiling with parcel
-.parcel-cache/
+
+.public/js/
 
 # OFC
 node_modules/

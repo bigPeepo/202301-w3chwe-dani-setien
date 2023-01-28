@@ -1,8 +1,10 @@
-const pokemonUrlApi = "https://pokeapi.co/api/v2/pokemon/";
+import type { Pokemon } from "./components/CardComponent/CardComponent";
 
-const getOgPokemonFromApi = async () => {
-  const pokemon = await fetch(pokemonUrlApi);
-  const pokemonConsumed = await pokemon.json();
-};
+const pokemonUrlApi = "https://pokeapi.co/api/v2/pokemon/4";
 
-getOgPokemonFromApi();
+(async () => {
+  const fetchedPokemon = await fetch(pokemonUrlApi);
+  const pokemonConsumed = (await fetchedPokemon.json()) as Pokemon;
+
+  return pokemonConsumed;
+})();

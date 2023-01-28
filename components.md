@@ -1,13 +1,13 @@
-## PageComponent
+## 1 PageComponent
 
-## HeaderComponent
+## 2 HeaderComponent
 
-## PaginationComponent
+## 3 ButtonComponent
 
-## CardListComponent
+## 4 CardListComponent
 
-## CardComponent
+## 5 CardComponent
 
-## PokemonDetailsComponent
+## 6 PaginationComponent
 
-## ButtonComponent
+## 7 PokemonDetailsComponent
