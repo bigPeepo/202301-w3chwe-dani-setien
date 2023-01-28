@@ -1,5 +1,8 @@
 import ButtonComponent from "./components/ButtonComponent/ButtonComponent.js";
+
 import Component from "./components/Component/Component.js";
+import { pokemons } from "./components/getThePokemon/index.js";
+
 import HeaderComponent from "./components/HeaderComponent/HeaderComponent.js";
 
 const root = document.querySelector(".root");
