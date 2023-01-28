@@ -34,16 +34,27 @@ export class PokemonCardComponent extends Component {
   public render() {
     super.render();
 
+    const {
+      name,
+      id,
+      sprites: {
+        other: {
+          dream_world: { front_default: imgUrl },
+        },
+      },
+    } = this.pokemon;
+
+    const type = this.pokemon.types[0].type.name;
+
     this.domElement.innerHTML = `
     
       <li>
-      <img src="${this.pokemon.sprites.other.dream_world.front_default}" height="200" width="200" />
+      <img src="${imgUrl}" height="200" width="200" />
       <div class="card__text">
-      <h2>${this.pokemon.name}</h2>
-      <span>#${this.pokemon.id}<span>
+      <h2>${name}</h2>
+      <span>#${id}<span>
       </div>
-      <div class="card__types-container">
-      </div>
+      <span class="card__types type-${type}">${type.toUpperCase()}</span>
       </li>
     `;
   }
