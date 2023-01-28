@@ -4,7 +4,7 @@ class HeaderComponent extends Component {
   constructor(parentElement: Element, className: string, tag = "div") {
     super(parentElement, className, tag);
 
-    this.domElement = document.createElement(tag);
+    this.domElement.className = className;
     this.parentElement = parentElement;
   }
 
