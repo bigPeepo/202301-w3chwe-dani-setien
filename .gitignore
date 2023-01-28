@@ -2,7 +2,7 @@
 .DS_Store  
 
 # Since we are compiling with parcel
-.public/js
+public/js/
 
 # OFC
 node_modules/
