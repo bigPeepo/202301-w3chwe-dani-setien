@@ -1,5 +1,10 @@
 import ButtonComponent from "./components/ButtonComponent/ButtonComponent.js";
+import { PokemonCardComponent } from "./components/CardComponent/CardComponent.js";
+
 import Component from "./components/Component/Component.js";
+
+import { pokemons } from "./components/getThePokemon/index.js";
+
 import HeaderComponent from "./components/HeaderComponent/HeaderComponent.js";
 
 const root = document.querySelector(".root");
@@ -7,9 +12,9 @@ const root = document.querySelector(".root");
 const pageComponent = new Component(root, "page-container", "div");
 pageComponent.render();
 
-const pageComponentEl = document.querySelector(".page-container");
+const pageComponentElement = document.querySelector(".page-container");
 const headerComponent = new HeaderComponent(
-  pageComponentEl,
+  pageComponentElement,
   "header",
   "header"
 );
@@ -20,3 +25,10 @@ const mySquadButton = new ButtonComponent(
   "btn my-squad"
 );
 mySquadButton.render();
+
+const listComponent = new Component(pageComponentElement, "list", "ul");
+listComponent.render();
+const listComponentElement = document.querySelector(".list");
+
+const pokeCard = new PokemonCardComponent(listComponentElement, pokemons[0]);
+pokeCard.render();

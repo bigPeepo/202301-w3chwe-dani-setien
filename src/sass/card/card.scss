@@ -1,0 +1,80 @@
+@use "../variables/variables.scss";
+
+.card__text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card > li {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  height: 340px;
+  width: 250px;
+  border-radius: 15px;
+  border: 6px solid variables.$color-accent;
+}
+
+.normal {
+  background-color: variables.$color-normal;
+}
+
+.fire {
+  background-color: variables.$color-fire;
+}
+
+.water {
+  background-color: variables.$color-water;
+}
+
+.grass {
+  background-color: variables.$color-grass;
+}
+
+.electric {
+  background-color: variables.$color-electric;
+}
+
+.ice {
+  background-color: variables.$color-ice;
+}
+
+.fighting {
+  background-color: variables.$color-fighting;
+}
+
+.poison {
+  background-color: variables.$color-poison;
+}
+
+.ground {
+  background-color: variables.$color-ground;
+}
+
+.flying {
+  background-color: variables.$color-flying;
+}
+
+.psychic {
+  background-color: variables.$color-psychic;
+}
+
+.bug {
+  background-color: variables.$color-bug;
+}
+
+.rock {
+  background-color: variables.$color-rock;
+}
+
+.ghost {
+  background-color: variables.$color-ghost;
+}
+
+.dragon {
+  background-color: variables.$color-dragon;
+}
