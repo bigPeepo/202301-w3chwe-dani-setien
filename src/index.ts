@@ -1,6 +1,8 @@
 import ButtonComponent from "./components/ButtonComponent/ButtonComponent.js";
+import { PokemonCardComponent } from "./components/CardComponent/CardComponent.js";
 
 import Component from "./components/Component/Component.js";
+
 import { pokemons } from "./components/getThePokemon/index.js";
 
 import HeaderComponent from "./components/HeaderComponent/HeaderComponent.js";
@@ -27,3 +29,6 @@ mySquadButton.render();
 const listComponent = new Component(pageComponentElement, "list", "ul");
 listComponent.render();
 const listComponentElement = document.querySelector(".list");
+
+const pokeCard = new PokemonCardComponent(listComponentElement, pokemons[0]);
+pokeCard.render();
