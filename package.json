@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prebuild-js": "npx rimraf public/js/",
+    "prebuild-js:dev": "npx rimraf public/js/",
     "build-js": "tsc",
     "build-js:dev": "npm run build-js -- -w",
     "test": "jest",

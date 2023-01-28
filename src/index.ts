@@ -1,8 +1,6 @@
-const pokemonUrlApi = "https://pokeapi.co/api/v2/pokemon/";
+import Component from "./components/Component/Component.js";
 
-const getOgPokemonFromApi = async () => {
-  const pokemon = await fetch(pokemonUrlApi);
-  const pokemonConsumed = await pokemon.json();
-};
+const root = document.querySelector(".root");
 
-getOgPokemonFromApi();
+const pageComponent = new Component(root, "page-container", "div");
+pageComponent.render();
