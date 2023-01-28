@@ -17,64 +17,141 @@
   width: 250px;
   border-radius: 15px;
   border: 6px solid variables.$color-accent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card__types {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 2px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px variables.$color-accent;
 }
 
 .normal {
   background-color: variables.$color-normal;
 }
 
+.type-normal {
+  background-color: variables.$color-normal-type;
+}
+
 .fire {
   background-color: variables.$color-fire;
+}
+
+.type-fire {
+  background-color: variables.$color-fire-type;
 }
 
 .water {
   background-color: variables.$color-water;
 }
 
+.type-water {
+  background-color: variables.$color-water-type;
+}
+
 .grass {
   background-color: variables.$color-grass;
+}
+
+.type-grass {
+  background-color: variables.$color-grass-type;
 }
 
 .electric {
   background-color: variables.$color-electric;
 }
 
+.type-electric {
+  background-color: variables.$color-electric-type;
+}
+
 .ice {
   background-color: variables.$color-ice;
+}
+
+.type-ice {
+  background-color: variables.$color-ice-type;
 }
 
 .fighting {
   background-color: variables.$color-fighting;
 }
 
+.type-fighting {
+  background-color: variables.$color-fighting-type;
+}
+
 .poison {
   background-color: variables.$color-poison;
+}
+
+.type-poison {
+  background-color: variables.$color-poison-type;
 }
 
 .ground {
   background-color: variables.$color-ground;
 }
 
+.type-ground {
+  background-color: variables.$color-ground-type;
+}
+
 .flying {
   background-color: variables.$color-flying;
+}
+
+.type-flying {
+  background-color: variables.$color-flying-type;
 }
 
 .psychic {
   background-color: variables.$color-psychic;
 }
 
+.type-psychic {
+  background-color: variables.$color-psychic-type;
+}
+
 .bug {
   background-color: variables.$color-bug;
+}
+
+.type-bug {
+  background-color: variables.$color-bug-type;
 }
 
 .rock {
   background-color: variables.$color-rock;
 }
 
+.type-rock {
+  background-color: variables.$color-rock-type;
+}
+
 .ghost {
   background-color: variables.$color-ghost;
 }
 
+.type-ghost {
+  background-color: variables.$color-ghost-type;
+}
+
 .dragon {
   background-color: variables.$color-dragon;
+}
+
+.type-dragon {
+  background-color: variables.$color-dragon-type;
 }
