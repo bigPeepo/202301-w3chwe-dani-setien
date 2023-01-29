@@ -52,6 +52,9 @@ export class PokemonCardComponent extends Component {
     this.domElement.innerHTML = `
     
       <li>
+      <button class="button">
+      <span class="button__addition">+<span>
+      </button>
       <img src="${imgUrl}" height="200" width="200" />
       <div class="card__text">
       <h2 class="card__name">${name}</h2>
