@@ -1,10 +1,11 @@
-import ButtonComponent from "./components/ButtonComponent/ButtonComponent.js";
+import MySquadButtonComponent from "./components/MySquadButtonComponent/MySquadButtonComponent.js";
 
 import Component from "./components/Component/Component.js";
 import { pokemons } from "./components/getThePokemon/index.js";
 
 import HeaderComponent from "./components/HeaderComponent/HeaderComponent.js";
 import { ListComponent } from "./components/ListComponent/ListComponent.js";
+import DeleteSquadButtonComponent from "./components/DeleteSquadButtonComponent/DeleteSquadButtonComponent.js";
 
 const pageComponent = new Component(document.body, "page-container", "div");
 pageComponent.render();
@@ -17,7 +18,7 @@ const headerComponent = new HeaderComponent(
 );
 headerComponent.render();
 
-const mySquadButton = new ButtonComponent(
+const mySquadButton = new MySquadButtonComponent(
   headerComponent.domElement,
   "btn my-squad"
 );
@@ -25,3 +26,9 @@ mySquadButton.render();
 
 export const pokeList = new ListComponent(pokemons);
 pokeList.render();
+
+const deleteSquadButton = new DeleteSquadButtonComponent(
+  headerComponent.domElement,
+  "btn delete-squad"
+);
+deleteSquadButton.render();

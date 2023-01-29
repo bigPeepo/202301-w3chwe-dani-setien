@@ -1,25 +1,5 @@
 import Component from "../Component/Component.js";
-
-export interface Pokemon {
-  name: string;
-  id: number;
-  types: TypeInfo[];
-  height: number;
-  weight: number;
-  sprites: {
-    other: {
-      dream_world: {
-        front_default: string;
-      };
-    };
-  };
-}
-
-export interface TypeInfo {
-  type: {
-    name: string;
-  };
-}
+import type { Pokemon } from "../types.js";
 
 export class PokemonCardComponent extends Component {
   private readonly pokemon: Pokemon;
