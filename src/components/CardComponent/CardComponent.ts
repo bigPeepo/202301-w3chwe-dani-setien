@@ -72,22 +72,22 @@ export class PokemonCardComponent extends Component {
         post.preventDefault();
         (async () => {
           await fetch(
-            "https://two02301-w3chwessl-dani-setien.onrender.com/pokemon/",
+            "https://two02301-w3chwe-backend-dani-setien.onrender.com/pokemon/",
             {
               method: "POST",
               body: JSON.stringify({
                 id: this.pokemon.id,
-                name: this.pokemon.name,
-                weight: this.pokemon.weight,
-                height: this.pokemon.height,
-                types: this.pokemon.types[0].type.name,
-                url: this.pokemon.sprites.other.dream_world.front_default,
+                pokemon: this.pokemon,
               }),
               headers: {
                 "Content-type": "application/json; charset=UTF-8",
               },
             }
-          ).then(async (response) => response.json());
+          )
+            .then(async (response) => response.json())
+            .then(() => {
+              this.domElement.classList.add("squad");
+            });
         })();
       });
   }

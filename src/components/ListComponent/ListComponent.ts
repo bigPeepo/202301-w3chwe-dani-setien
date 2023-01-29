@@ -1,25 +1,27 @@
 import type { Pokemon } from "../CardComponent/CardComponent.js";
 import PokemonCardComponent from "../CardComponent/CardComponent.js";
 import Component from "../Component/Component.js";
-import { pokemons } from "../getThePokemon/index.js";
+
 import { pageComponentElement } from "../../index.js";
 
 export class ListComponent extends Component {
   private readonly pokemons: Pokemon[];
 
-  constructor() {
+  constructor(pokemonArray: Pokemon[]) {
     super(pageComponentElement, "list");
-    this.pokemons = pokemons;
+    this.pokemons = pokemonArray;
+    this.domElement = document.createElement("ul");
+    this.domElement.className = "list";
   }
 
   public render() {
     super.render();
     this.domElement.innerHTML = `
-    <div>
-      <ul class="list">
+
+
         ${this.pokemons.map(() => '<li class="pokemon"></li>').join("")}
-      </ul>
-    </div>
+
+
     `;
 
     this.domElement
@@ -32,5 +34,9 @@ export class ListComponent extends Component {
         );
         pokemonCardComponent.render();
       });
+  }
+
+  delete() {
+    this.domElement.innerHTML = "";
   }
 }

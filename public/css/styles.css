@@ -275,4 +275,19 @@ img {
   background-color: #512bdc;
 }
 
+.squad::after {
+  position: absolute;
+  top: 0;
+  content: "Squad Member";
+  align-self: center;
+  margin-bottom: 15px;
+  display: inline;
+  background-color: rgba(41, 46, 60, 0.923);
+  color: white;
+  font-weight: 500;
+  letter-spacing: 2px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
 /*# sourceMappingURL=styles.css.map */

@@ -1,13 +1,12 @@
 import ButtonComponent from "./components/ButtonComponent/ButtonComponent.js";
 
 import Component from "./components/Component/Component.js";
+import { pokemons } from "./components/getThePokemon/index.js";
 
 import HeaderComponent from "./components/HeaderComponent/HeaderComponent.js";
 import { ListComponent } from "./components/ListComponent/ListComponent.js";
 
-const root = document.querySelector(".root");
-
-const pageComponent = new Component(root, "page-container", "div");
+const pageComponent = new Component(document.body, "page-container", "div");
 pageComponent.render();
 
 export const pageComponentElement = document.querySelector(".page-container");
@@ -24,9 +23,5 @@ const mySquadButton = new ButtonComponent(
 );
 mySquadButton.render();
 
-const listComponent = new Component(pageComponentElement, "list", "ul");
-listComponent.render();
-const listComponentElement = document.querySelector(".list");
-
-const pokeList = new ListComponent();
+export const pokeList = new ListComponent(pokemons);
 pokeList.render();
