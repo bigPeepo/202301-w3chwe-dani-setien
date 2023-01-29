@@ -1,4 +1,4 @@
-import type { Pokemon } from "../CardComponent/CardComponent.js";
+import type { Pokemon } from "../types";
 
 const urlApi = "https://pokeapi.co/api/v2/pokemon/";
 

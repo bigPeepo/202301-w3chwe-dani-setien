@@ -73,6 +73,10 @@ li {
   font-weight: 800;
 }
 
+.delete-squad {
+  background-color: #c64b3d;
+}
+
 .header {
   display: flex;
   flex-direction: row;
@@ -288,6 +292,13 @@ img {
   letter-spacing: 2px;
   padding: 5px;
   border-radius: 5px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

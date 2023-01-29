@@ -1,8 +1,8 @@
-import type { Pokemon } from "../CardComponent/CardComponent.js";
 import PokemonCardComponent from "../CardComponent/CardComponent.js";
 import Component from "../Component/Component.js";
 
 import { pageComponentElement } from "../../index.js";
+import type { Pokemon } from "../types.js";
 
 export class ListComponent extends Component {
   private readonly pokemons: Pokemon[];

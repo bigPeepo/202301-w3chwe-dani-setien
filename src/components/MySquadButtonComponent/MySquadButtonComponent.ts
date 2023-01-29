@@ -1,14 +1,10 @@
 import { pokeList } from "../../index.js";
-import type { Pokemon } from "../CardComponent/CardComponent.js";
+
 import Component from "../Component/Component.js";
 import { ListComponent } from "../ListComponent/ListComponent.js";
+import type { BackendResponse, Pokemon } from "../types.js";
 
-interface backendResponse {
-  id: number;
-  pokemon: Pokemon;
-}
-
-class ButtonComponent extends Component {
+class MySquadButtonComponent extends Component {
   constructor(parentElement: Element, className: string) {
     super(parentElement, className);
 
@@ -29,10 +25,10 @@ class ButtonComponent extends Component {
           "https://two02301-w3chwe-backend-dani-setien.onrender.com/pokemon/"
         )
           .then(async (response) => response.json())
-          .then((json: backendResponse[]) => {
+          .then((json: BackendResponse[]) => {
             pokeList.delete();
 
-            const teamBuilder = (response: backendResponse[]) => {
+            const teamBuilder = (response: BackendResponse[]) => {
               const myTeam: Pokemon[] = [];
               response.forEach((backendElement) =>
                 myTeam.push(backendElement.pokemon)
@@ -49,4 +45,4 @@ class ButtonComponent extends Component {
   }
 }
 
-export default ButtonComponent;
+export default MySquadButtonComponent;
