@@ -1,3 +1,5 @@
+@use "../variables/variables.scss";
+
 .btn {
   appearance: none;
   background-color: #fafbfc;
@@ -55,4 +57,22 @@
 
 .btn:-webkit-details-marker {
   display: none;
+}
+
+.button {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 10px;
+  box-shadow: 2px 2px 2px variables.$color-accent;
+}
+
+li {
+  position: relative;
+}
+
+.button__addition {
+  font-size: 24px;
+  font-weight: 800;
 }

@@ -52,6 +52,11 @@ export class PokemonCardComponent extends Component {
     this.domElement.innerHTML = `
     
       <li>
+
+      <button class="button">
+      <span class="button__addition">+<span>
+      </button>
+
       <img src="${imgUrl}" height="200" width="200" />
       <div class="card__text">
       <h2 class="card__name">${name}</h2>
@@ -60,6 +65,31 @@ export class PokemonCardComponent extends Component {
       <span class="card__types type-${type}">${type.toUpperCase()}</span>
       </li>
     `;
+
+    this.domElement
+      .querySelector(".button__addition")
+      .addEventListener("click", (post) => {
+        post.preventDefault();
+        (async () => {
+          await fetch(
+            "https://two02301-w3chwessl-dani-setien.onrender.com/pokemon/",
+            {
+              method: "POST",
+              body: JSON.stringify({
+                id: this.pokemon.id,
+                name: this.pokemon.name,
+                weight: this.pokemon.weight,
+                height: this.pokemon.height,
+                types: this.pokemon.types[0].type.name,
+                url: this.pokemon.sprites.other.dream_world.front_default,
+              }),
+              headers: {
+                "Content-type": "application/json; charset=UTF-8",
+              },
+            }
+          ).then(async (response) => response.json());
+        })();
+      });
   }
 }
 
